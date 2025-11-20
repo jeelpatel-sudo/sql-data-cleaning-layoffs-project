@@ -1,14 +1,14 @@
 **SQL Data Cleaning Project — Global Layoffs Dataset**
 
-This project showcases my ability to clean, transform, and prepare raw data using MySQL. As my first SQL project, I focused on building a strong foundation in SQL-based data cleaning by following a structured, industry-standard workflow. The dataset used in this project comes from the public repository created by Alex The Analys (Dataset Source: Global Layoffs Dataset (CSV file) from GitHub).
+This project demonstrates a structured approach to cleaning and preparing raw data using MySQL. The dataset is sourced from Alex The Analyst’s GitHub repository:
+Global Layoffs Dataset (https://github.com/AlexTheAnalyst/MySQL-YouTube-Series/blob/main/layoffs.csv). 
 
 
 **Project Objective :**
 
-The purpose of this project was to practice and demonstrate essential SQL data-cleaning techniques using MySQL.
+The goal of this project was to practice SQL data-cleaning techniques and produce a clean, analysis-ready dataset. The steps include removing duplicates, standardizing data, handling null values, and dropping unnecessary columns.
 
-
-**Tools Used**
+**Tools and SQL Functions Used**
 
 1. MySQL (Primary database system)
 2. Window Functions (ROW_NUMBER)
@@ -30,9 +30,6 @@ Used ROW_NUMBER() window function to flag duplicate rows based on all relevant c
 
 Deleted records where row numbers > 1.
 
-Key SQL Concepts Used:
-ROW_NUMBER(), Partitioning, CTEs, DELETE operations
-
 **2️ Standardize the Data**
 
 Trimmed whitespace from text fields using TRIM().
@@ -42,9 +39,6 @@ Standardized inconsistent categories (e.g., “Crypto”, “United States”).
 Cleaned and converted the date column from text to proper MySQL DATE format using STR_TO_DATE.
 
 Ensured all fields followed uniform formatting standards.
-
-Key SQL Concepts Used:
-TRIM(), LIKE, UPDATE, STR_TO_DATE(), ALTER TABLE
 
 **3️ Handle Null and Blank Values**
 
@@ -56,8 +50,6 @@ Used a self-join method to populate missing values based on matching company/loc
 
 Cleaned accidental duplicated rows by reapplying the row number method.
 
-Key SQL Concepts Used:
-Self-JOIN, Conditional UPDATE, NULL handling
 
 **4️ Remove Unnecessary Columns and Rows**
 
@@ -67,19 +59,7 @@ Removed rows where both layoff metrics were null, meaning no meaningful data rem
 
 Produced a final cleaned table ready for analysis.
 
-Key SQL Concepts Used:
-ALTER TABLE DROP COLUMN, DELETE
 
  **Final Result**
 
-The cleaned dataset is stored in a finalized staging table, containing standardized, consistent, and duplicate-free records—ready for deeper analysis, dashboards, or machine learning preparation.
-
-This project demonstrates my ability to:
-
-Build a structured data-cleaning workflow
-
-Apply SQL functions
-
-Work independently with real-world, imperfect datasets
-
-Prepare data for professional analysis
+The final table is cleaned, consistent, and ready for analysis. This project demonstrates practical SQL skills in handling real-world, imperfect datasets and preparing them for further analysis or reporting.
